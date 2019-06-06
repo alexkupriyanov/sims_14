@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sims_14", "sims_14\sims_14.csproj", "{37462BF3-FDFC-4758-B4E8-3C89AFD55FAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37462BF3-FDFC-4758-B4E8-3C89AFD55FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37462BF3-FDFC-4758-B4E8-3C89AFD55FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37462BF3-FDFC-4758-B4E8-3C89AFD55FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37462BF3-FDFC-4758-B4E8-3C89AFD55FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {377A8861-7932-43B5-B264-9F8BD0441DDD}
+	EndGlobalSection
+EndGlobal
