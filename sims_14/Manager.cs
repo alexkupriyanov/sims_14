@@ -40,7 +40,6 @@ namespace sims_13
                 timeArrival = currentTime + GetPPPDistribution();
                 flag = false;
             }
-
             if (currentTime > timeArrival)
             {
                 var customer = new Customer(currentTime);
@@ -49,19 +48,7 @@ namespace sims_13
             }
             foreach (var worker in workers)
             {
-                if (worker.IsFree())
-                { 
-                    if (customers.Count > 0)
-                    {
-                        customers.Dequeue();
-                        worker.StartWork();
-                    }
-                }
-                else
-                {
-                    busyWorkers++;
-                }
-                worker.Update();
+                worker.Update(ref customers, ref busyWorkers);
             }
 
             queueLabel.Text = "Queue: " + customers.Count;

@@ -13,7 +13,6 @@ namespace sims_13
     {
 
         private int date = 0;
-
         private double currentTime = 0;
 
         private Manager manager;

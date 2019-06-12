@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,7 +40,7 @@ namespace sims_13
             this.timeDuration = (int) (GetDistribution(lambda) * 10);
         }
 
-        public void Update()
+        public void Update(ref Queue<Customer> customers, ref int busyWorkers)
         {
             if (this.isWork)
             {
@@ -53,12 +54,17 @@ namespace sims_13
                 {
                     label.Text = $"Worker {this.num + 1} is busy for {Math.Abs((double)(this.currentTime - this.timeDuration) / 10)} second";
                 }
-            }
-        }
 
-        public bool IsFree()
-        {
-            return !this.isWork;
+                busyWorkers++;
+            }
+            else
+            {
+                if (customers.Count > 0)
+                {
+                    customers.Dequeue();
+                    StartWork();
+                }
+            }
         }
 
         private double GetDistribution(double lambda)
